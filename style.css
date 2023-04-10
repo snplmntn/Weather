@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dae8e7;
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #60c96c;
+  height: 7vh;
+  margin-bottom: 20px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 900px 1fr;
+  align-content: center;
+  justify-content: center;
+  height: 90vh;
+}
+
+.title {
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.search {
+  margin-right: 20px;
+  border-radius: 10px;
+  height: 3vh;
+  width: 15rem;
+}
+
+.kuya-kim {
+  margin-left: 20px;
+}
+
+.kuya-kim img {
+  max-width: 900px;
+  max-height: 868px;
+  margin-top: 10px;
+}
+
+.city-weather-container {
+  background-color: #2b8b7f;
+  margin-right: 20px;
+  border-radius: 100px;
+  position: relative;
+}
+
+.city-info {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.city-name {
+  font-size: 50px;
+}
+
+.city-condition {
+  position: absolute;
+  bottom: 10%;
+  right: 45%;
+  text-align: center;
+}
+
+.city-temp {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
+
+.city-status {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  background-size: cover;
+}
+
+.hidden {
+  display: none;
+}

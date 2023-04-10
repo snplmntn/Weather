@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
+    <title>Weather App</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h2 class="title">Weather Weather Lang</h2>
+      <input type="text" class="search" placeholder=" Search Place" />
+    </header>
+
+    <main>
+      <div class="kuya-kim">
+        <img src="img/kuya_kim_atienza1.png" alt="kuya-kim" />
+      </div>
+      <div class="city-weather-container">
+        <div class="city-info">
+          <h1 class="city-name">City</h1>
+          <p class="city-country">Country</p>
+        </div>
+
+        <div class="city-condition">
+          <div class="city-status"></div>
+          <h2 class="city-weather">Weather</h2>
+        </div>
+
+        <h2 class="city-temp">Temperature</h2>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
