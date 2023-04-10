@@ -88,6 +88,11 @@ main {
   background-size: cover;
 }
 
+.prompt {
+  align-self: center;
+  justify-self: center;
+}
+
 .hidden {
   display: none;
 }
