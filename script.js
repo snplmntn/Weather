@@ -9,10 +9,12 @@ const weatherStats = document.querySelector(".city-weather");
 const weatherIcon = document.querySelector(".city-status");
 const weatherContainer = document.querySelector(".city-weather-container");
 const prompt = document.querySelector(".prompt");
-console.log(prompt);
 //fetch api
 searchPlace.addEventListener("keyup", async function (e) {
   try {
+    prompt.innerHTML = "Hit enter to Proceed";
+    weatherContainer.classList.add("hidden");
+    prompt.classList.remove("hidden");
     if (e.key === "Enter") {
       weatherContainer.classList.remove("hidden");
       prompt.classList.add("hidden");
@@ -20,18 +22,12 @@ searchPlace.addEventListener("keyup", async function (e) {
         `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${searchPlace.value}&aqi=no`
       );
       const weatherObject = await weatherAPI.json();
-      console.log(weatherObject);
       city.innerHTML = weatherObject.location.name;
       country.innerHTML = weatherObject.location.country;
       temp.innerHTML = `${weatherObject.current.temp_c} &#8451;`;
       weatherStats.innerHTML = weatherObject.current.condition.text;
       //   weatherIcon.classList.remove("hidden");
       weatherIcon.style.backgroundImage = `url(${weatherObject.current.condition.icon})`;
-      console.log();
-    } else {
-      prompt.innerHTML = "Hit enter to Proceed";
-      weatherContainer.classList.add("hidden");
-      prompt.classList.remvoe("hidden");
     }
   } catch (err) {
     city.innerHTML = "Error";
