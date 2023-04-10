@@ -45,8 +45,8 @@ main {
 }
 
 .kuya-kim img {
-  max-width: 900px;
-  max-height: 868px;
+  max-width: 100rem;
+  max-height: 100rem;
   margin-top: 10px;
 }
 
@@ -98,6 +98,10 @@ main {
 }
 
 @media (max-width: 1474px) {
+  .city-weather-container {
+    margin-right: 0;
+  }
+
   header {
     display: flex;
     flex-direction: column;
@@ -123,9 +127,13 @@ main {
     height: 80vh;
   }
 
+  .kuya-kim {
+    margin-right: 0;
+  }
+
   .kuya-kim img {
-    max-width: 500px;
-    max-height: 378px;
+    min-width: 10rem;
+    min-height: 10rem;
   }
 
   .city-name {
@@ -141,5 +149,12 @@ main {
     width: 3rem;
     height: 3rem;
     background-size: cover;
+  }
+}
+
+@media (max-width: 740px) {
+  .kuya-kim img {
+    height: auto;
+    width: 498px;
   }
 }
